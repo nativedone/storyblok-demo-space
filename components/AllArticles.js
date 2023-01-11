@@ -3,12 +3,15 @@ import { getStoryblokApi, storyblokEditable } from "@storyblok/react";
 
 import { useState, useEffect } from "react";
 
-const AllArticles = ({ blok }) => {
+const AllArticles = ({ blok, locale }) => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     const getArticles = async () => {
       const storyblokApi = getStoryblokApi();
-      const { data } = await storyblokApi.get(`cdn/stories?starts_with=blog/&is_startpage=false`);
+      const { data } = await storyblokApi.get(`cdn/stories`, {
+        starts_with: 'blog/',
+        is_startpage: false
+      });
       
       setArticles((prev) => data.stories.map((article) => {
         article.content.slug = article.slug;
@@ -16,7 +19,7 @@ const AllArticles = ({ blok }) => {
       }));
     };
     getArticles();
-}, []);
+}, [locale]);
   return (
     <>
       <p className="text-3xl">{blok.title}</p>
