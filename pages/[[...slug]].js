@@ -7,27 +7,27 @@ import {
 const HOME_PAGE_SLUG = "homepage";
 
 const RESOLVE_RELATIONS = [
-  // "services-overview-list.selected_services",
-  // "more-services-section.selected_more_services",
+  "services-overview-list.selected_services",
+  "more-services-section.selected_more_services",
 
-  // "home-services-section.selected_services",
+  "home-services-section.selected_services",
 
-  // "service-advice-process-section.reference",
+  "service-advice-process-section.reference",
 
-  // "home-life-events-section.selected_life_events",
+  "home-life-events-section.selected_life_events",
 
-  // "resources-types-section.selected_articles",
-  // "resources-types-section.selected_videos",
-  // "resources-types-section.selected_policy_forms",
+  "resources-types-section.selected_articles",
+  "resources-types-section.selected_videos",
+  "resources-types-section.selected_policy_forms",
 
-  // "testimonial-section.testimonials",
+  "testimonial-section.testimonials",
 
-  // "home-testimonial-section.selected_testimonials",
-  // "about-us-article.selected_article",
+  "home-testimonial-section.selected_testimonials",
+  "about-us-article.selected_article",
 
-  // "service-intro-section.services_benefits_files_list",
+  "service-intro-section.services_benefits_files_list",
 
-  // "privacy-policy-page.selected_policy_forms",
+  "privacy-policy-page.selected_policy_forms",
 ];
 
 // test 3 without resolve relations
