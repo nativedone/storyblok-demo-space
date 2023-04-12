@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
+import NewLayout from "../components/NewLayout";
 
 import {
   useStoryblokState,
@@ -18,9 +19,9 @@ export default function Page({ story, locales, locale, defaultLocale }) {
         <title>{story ? story.name : "My Site"}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout locales={locales} locale={locale} defaultLocale={defaultLocale}>
+      <NewLayout >
         <StoryblokComponent blok={story.content} locale={locale}  />
-      </Layout>
+      </NewLayout>
     </div>
   );
 }
@@ -29,7 +30,7 @@ export async function getStaticProps({ params, locales, locale, defaultLocale })
   let slug = params.slug ? params.slug.join("/") : "home";
 
   let sbParams = {
-    version: "draft", // or 'published'
+    version: "published", // or 'published'
     language: locale
   };
 
@@ -68,6 +69,8 @@ export async function getStaticPaths({locales}) {
       paths.push({ params: { slug: splittedSlug }, locale });
     }
   });
+
+  console.log("paths", JSON.stringify(paths, null, 2));
 
   return {
     paths: paths,

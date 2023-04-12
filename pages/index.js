@@ -8,6 +8,7 @@ import {
   StoryblokComponent,
 } from "@storyblok/react";
 import Layout from "../components/Layout";
+import NewLayout from "../components/NewLayout";
 
 export default function Home({ story, locales, locale, defaultLocale }) {
   story = useStoryblokState(story, {
@@ -25,9 +26,9 @@ export default function Home({ story, locales, locale, defaultLocale }) {
       {/* <header>
         <h1>{story ? story.name : "My Site"}</h1>
       </header> */}
-      <Layout locales={locales} locale={locale} defaultLocale={defaultLocale}>
+      <NewLayout>
         <StoryblokComponent blok={story.content} />
-      </Layout>
+      </NewLayout>
     </div>
   );
 }
@@ -36,7 +37,7 @@ export async function getStaticProps({locales, locale, defaultLocale}) {
   let slug = "home";
 
   let sbParams = {
-    version: "draft", // or 'published',
+    version: "published", // or 'published',
     resolve_relations: ["popular-articles.articles"],
     language: locale
   };

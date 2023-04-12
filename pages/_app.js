@@ -13,15 +13,25 @@ const components = {
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
-  page: Page,
+  "default-page": Page,
   hero: Hero,
   "all-articles": AllArticles,
   article: Article,
   "popular-articles": PopularArticles,
+  "text-section": () => <div>this is text section</div>,
+  "form-section": () => <div>this is form section</div>,
+  "grid-section": () => <div>this is grid section</div>,
+  "banner-reference": () => <div>this is banner reference</div>,
+  "featured-articles-section": () => <div>this is featured articles section</div>,
+  "banner": () => <div>this is banner</div>,
+  "image-text-section": () => <div>this is image text section</div>,
+  "article-overview-page": () => <div>This is articles overview page</div>,
+  "category": () => <div>this is category component</div>,
 };
 
 storyblokInit({
-  accessToken: "xr4OhJ2GGQ6Oco2ugxQn0Att",
+  accessToken: "RnKnH1XOkfk2r3xyJiXrvgtt",
+  // accessToken: "xr4OhJ2GGQ6Oco2ugxQn0Att",
   // for spaces located in the US:
   // apiOptions: {
   //   region: "us",
