@@ -66,13 +66,13 @@ export async function getStaticProps({ params }) {
     version: "published",
     // version: process.env.STORY_BLOK_VERSION,
     resolve_relations: RESOLVE_RELATIONS,
-    cv: Date.now(),
+    // cv: Date.now(),
   };
 
   const storyblokApi = getStoryblokApi();
   // let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
 
-  console.log("process.version", process.version)
+  console.log("process.version", process.version,)
 
 
   let data, headerStory, footerStory, contactBoxStory;
@@ -122,7 +122,7 @@ export async function getStaticProps({ params }) {
     );
   } catch (error) {
     console.log(
-      `error on get static props at ${slug}`,
+      `\x1b[33m error on get static props at ${slug} \x1b[0m`,
       JSON.stringify(error, null, 2)
     );
   }

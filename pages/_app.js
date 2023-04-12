@@ -42,7 +42,7 @@ const components = {
 
 storyblokInit({
   accessToken: "N8q5toeq3qQ0RzLU3b9Dcwtt", // public token
-  // accessToken: "sCQVzXfkKon7Qqo2B5ISXQtt", // public token
+  // accessToken: "n44BuFJIFtsBEKCWkwznMwtt", // preview token
   // accessToken: "RnKnH1XOkfk2r3xyJiXrvgtt", // preview token
   // for spaces located in the US:
   // apiOptions: {
