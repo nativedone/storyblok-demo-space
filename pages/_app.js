@@ -28,6 +28,16 @@ const components = {
   "article-overview-page": () => <div>This is articles overview page</div>,
   "category": () => <div>this is category component</div>,
   "home-page": () => <div>this is homepage component</div>,
+  "terms-page": () => <div>terms-page</div>,
+  "life-event-page": () => <div>life-event-page</div>,
+  "contact-us-page": () => <div>contact-us-page</div>,
+  "about-us-page": () => <div>about-us-page</div>,
+  "testimonial-page": () => <div>testimonial-page</div>,
+  "resources-overview-page": () => <div>resources-overview-page</div>,
+  "service-page": () => <div>service-page</div>,
+  "resources-overview-page": () => <div>resources-overview-page</div>,
+  "services-overview-page": () => <div>services-overview-page</div>,
+  "privacy-policy-page": () => <div>privacy-policy-page</div>,
 };
 
 storyblokInit({
