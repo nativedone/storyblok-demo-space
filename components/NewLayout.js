@@ -20,9 +20,9 @@ const Header = (props) => {
           <a style={{ color: "white", padding: 20 }}>{b.label}</a>
         </Link>
       ))}
-      {props.buttons.map((b) => (
+      {/* {props.buttons.map((b) => (
         <div style={{ color: "white", padding: 20 }}>{b.label}</div>
-      ))}
+      ))} */}
     </div>
   );
 };

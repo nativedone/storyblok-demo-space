@@ -27,10 +27,12 @@ const components = {
   "image-text-section": () => <div>this is image text section</div>,
   "article-overview-page": () => <div>This is articles overview page</div>,
   "category": () => <div>this is category component</div>,
+  "home-page": () => <div>this is homepage component</div>,
 };
 
 storyblokInit({
-  accessToken: "sCQVzXfkKon7Qqo2B5ISXQtt", // public token
+  accessToken: "N8q5toeq3qQ0RzLU3b9Dcwtt", // public token
+  // accessToken: "sCQVzXfkKon7Qqo2B5ISXQtt", // public token
   // accessToken: "RnKnH1XOkfk2r3xyJiXrvgtt", // preview token
   // for spaces located in the US:
   // apiOptions: {
