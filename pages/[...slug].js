@@ -52,7 +52,7 @@ export async function getStaticProps({ params, locales, locale, defaultLocale })
 export async function getStaticPaths({locales}) {
   const storyblokApi = getStoryblokApi();
   let { data } = await storyblokApi.get("cdn/links/" ,{
-    version: 'draft'
+    version: 'published'
   });
 
   let paths = [];

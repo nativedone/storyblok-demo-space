@@ -30,8 +30,8 @@ const components = {
 };
 
 storyblokInit({
-  accessToken: "RnKnH1XOkfk2r3xyJiXrvgtt",
-  // accessToken: "xr4OhJ2GGQ6Oco2ugxQn0Att",
+  accessToken: "sCQVzXfkKon7Qqo2B5ISXQtt", // public token
+  // accessToken: "RnKnH1XOkfk2r3xyJiXrvgtt", // preview token
   // for spaces located in the US:
   // apiOptions: {
   //   region: "us",

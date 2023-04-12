@@ -45,7 +45,7 @@ const Footer = (props) => {
 };
 
 export default function NewLayout({ children }) {
-  const story = useStoryblok("site-config", { version: "draft" });
+  const story = useStoryblok("site-config", { version: "published" });
 
   console.log("story", story);
 
