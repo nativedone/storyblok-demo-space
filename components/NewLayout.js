@@ -49,7 +49,7 @@ export default function NewLayout({ children, siteConfig }) {
 
 const story = siteConfig;
 
-  console.log("story", story);
+  // console.log("story", story);
 
   if (!siteConfig?.content) {
     return <div>Loading...</div>;

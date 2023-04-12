@@ -13,7 +13,7 @@ export default function Page({ story, siteConfig, locale, defaultLocale }) {
     language: locale
   });
 
-  console.log("siteConfig", siteConfig);
+  // console.log("siteConfig", siteConfig);
 
   return (
     <div >
@@ -33,6 +33,7 @@ export async function getStaticProps({ params, locales, locale, defaultLocale })
 
   let sbParams = {
     version: "published", // or 'published'
+    resolve_relations: ["popular-articles.articles"],
     language: locale
   };
 
@@ -61,12 +62,16 @@ export async function getStaticPaths({locales}) {
 
   let paths = [];
   Object.keys(data.links).forEach((linkKey) => {
-    if (data.links[linkKey].is_folder || data.links[linkKey].slug === "home") {
+    if (data.links[linkKey].is_folder
+      //  || data.links[linkKey].slug === "home"
+       ) {
       return;
     }
 
     const slug = data.links[linkKey].slug;
     let splittedSlug = slug.split("/");
+
+    if (slug === `home`) splittedSlug = false;
 
 
     for (const locale of locales) {
@@ -74,7 +79,7 @@ export async function getStaticPaths({locales}) {
     }
   });
 
-  console.log("paths", JSON.stringify(paths, null, 2));
+  // console.log("paths", JSON.stringify(paths, null, 2));
 
   return {
     paths: paths,
