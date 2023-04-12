@@ -70,6 +70,8 @@ export async function getStaticProps({ params }) {
   const storyblokApi = getStoryblokApi();
   // let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
 
+  console.log("process.version", process.version)
+
 
   let data, headerStory, footerStory, contactBoxStory;
   try {
