@@ -30,7 +30,7 @@ const RESOLVE_RELATIONS = [
   // "privacy-policy-page.selected_policy_forms",
 ];
 
-// test 2 without resolve relations
+// test 3 without resolve relations
 
 export default function AllRoutes(props) {
   // console.log("AllRoutes props", props);
