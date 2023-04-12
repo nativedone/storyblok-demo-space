@@ -69,7 +69,7 @@ export async function getStaticProps({ params }) {
     // cv: Date.now(),
   };
 
-  // test 2 without cv: Date.now()
+  // test 3 without cv: Date.now()
 
   const storyblokApi = getStoryblokApi();
   // let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
