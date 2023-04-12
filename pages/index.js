@@ -53,8 +53,8 @@ export async function getStaticProps({locales, locale, defaultLocale}) {
       defaultLocale,
       story: data ? data.story : false,
       siteConfig: siteConfigData ? siteConfigData.story : false,
-      key: data ? data.story.id : false,
+      // key: data ? data.story.id : false,
     },
-    revalidate: 3600,
+    // revalidate: 3600,
   };
 }
