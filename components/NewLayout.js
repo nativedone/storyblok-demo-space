@@ -44,12 +44,14 @@ const Footer = (props) => {
   );
 };
 
-export default function NewLayout({ children }) {
-  const story = useStoryblok("site-config", { version: "published" });
+export default function NewLayout({ children, siteConfig }) {
+//   const story = useStoryblok("site-config", { version: "published" });
+
+const story = siteConfig;
 
   console.log("story", story);
 
-  if (!story?.content) {
+  if (!siteConfig?.content) {
     return <div>Loading...</div>;
   }
 

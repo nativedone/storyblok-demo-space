@@ -8,10 +8,12 @@ import {
   StoryblokComponent,
 } from "@storyblok/react";
 
-export default function Page({ story, locales, locale, defaultLocale }) {
+export default function Page({ story, siteConfig, locale, defaultLocale }) {
   story = useStoryblokState(story, {
     language: locale
   });
+
+  console.log("siteConfig", siteConfig);
 
   return (
     <div >
@@ -19,7 +21,7 @@ export default function Page({ story, locales, locale, defaultLocale }) {
         <title>{story ? story.name : "My Site"}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NewLayout >
+      <NewLayout siteConfig={siteConfig}>
         <StoryblokComponent blok={story.content} locale={locale}  />
       </NewLayout>
     </div>
@@ -36,6 +38,7 @@ export async function getStaticProps({ params, locales, locale, defaultLocale })
 
   const storyblokApi = getStoryblokApi();
   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+  let { data: siteConfigData } = await storyblokApi.get(`cdn/stories/site-config`, sbParams);
 
   return {
     props: {
@@ -43,6 +46,7 @@ export async function getStaticProps({ params, locales, locale, defaultLocale })
       locale, 
       defaultLocale,
       story: data ? data.story : false,
+      siteConfig: siteConfigData ? siteConfigData.story : false,
       key: data ? data.story.id : false,
     },
     revalidate: 3600,
