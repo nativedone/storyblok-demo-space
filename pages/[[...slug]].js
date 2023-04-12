@@ -38,8 +38,21 @@ export async function getStaticProps({ params, locales, locale, defaultLocale })
   };
 
   const storyblokApi = getStoryblokApi();
-  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
-  let { data: siteConfigData } = await storyblokApi.get(`cdn/stories/site-config`, sbParams);
+  let data, siteConfigData;
+  try {
+    
+    let dataResponse = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+    data = dataResponse.data;
+    let siteConfigResponse = await storyblokApi.get(`cdn/stories/site-config`, sbParams);
+    siteConfigData = siteConfigResponse.data;
+
+  } catch (error) {
+    console.log(
+      `error on get static props at ${slug}`,
+      JSON.stringify(error, null, 2)
+    );
+    
+  }
 
   return {
     props: {
